@@ -1,0 +1,102 @@
+body {
+    background-image: url(../images/background-image.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    font-family: 'M PLUS Rounded 1c';
+    background-color: rgb(240, 231, 240);
+
+}
+
+/*トップ*/
+.title_img img {
+    position: absolute;
+    z-index: -3;
+    top: 0;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title_img {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.setumei_group {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    position: fixed;
+    right: 2.5%;
+    top: 10%;
+    background-color: #00000084;
+    color: #ffffff;
+}
+
+.setumei_group p {
+    padding: 0px 50px 0px 50px;
+    font-size: 18px;
+    line-height: 30px
+}
+
+.setumei_title {
+    font-size: 300px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: rgba(195, 2, 2, 0.556);
+
+    text-align: center;
+    margin-top: 0%;
+}
+
+.top_group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+}
+
+.top_button_group {
+    margin: 600px 500px 0px 0px;
+    position: absolute;
+    position: fixed;
+    z-index: 0;
+
+
+}
+
+/*山内さん*/
+
+.yamauchi_group {
+    width: 100%;
+
+}
+
+.yamauchi {
+    position: absolute;
+    position: fixed;
+    z-index: -2;
+    width: 70%;
+}
+
+
+/*スタートボタン*/
+
+#start {
+    background-color: rgba(149, 22, 22, 0.768);
+    padding: 20px 70px 20px 70px;
+    font-size: 20px;
+    border-color: #555;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+#start:hover {
+    background-color: rgba(195, 2, 2, 0.274);
+    border-color: #555555db;
+    color: rgb(255, 255, 255);
+}

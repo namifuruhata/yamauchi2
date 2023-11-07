@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+​
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福岡DEV14期の山内さん2</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="images/favicon.ico" id="favicon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=M+PLUS+Rounded+1c:wght@100;300;400;700;800&family=Rubik+Dirt&family=Rubik+Moonrocks&display=swap"
+        rel="stylesheet">
+</head>
+​
+
+<body>
+<div id="game-container"></div>
+
+<!-- スコア表示用 -->
+
+<div class="score_group">
+<div id="score">HP: 0</div>
+</div>
+
+<!-- カスタムモーダルダイアログ -->
+<div id="questionModal" class="modal">
+    <div class="modal-content">
+        <p id="questionText"></p>
+        <button id="btnYes">はい</button>
+        <button id="btnNo">いいえ</button>
+    </div>
+</div>
+
+<div id="toast-container"></div>
+
+<!-- ゲームオーバーモーダル -->
+<div id="gameOverModal" class="modal">
+    <div class="modal-content">
+        <h2>山内は逃げました</h2>
+        <button id="restartButton">最初から</button>
+        <a href="top.html">
+            <button id="toTitleButtonClear">タイトルへ戻る</button>
+        </a>
+    </div>
+</div>
+
+<!-- ゲームクリアモーダル -->
+<div id="gameClearModal" class="modal">
+    <div class="modal-content">
+        <h2>山内は逃げるのを諦めました！勝利！</h2>
+        <button id="restartButtonClear">最初から</button>
+        <a href="top.html">
+        <button id="toTitleButtonClear">タイトルへ戻る</button>
+        </a>
+    </div>
+</div>
+
+    ​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+​
+
+</html>

@@ -1,0 +1,99 @@
+ body {
+     background-image: url(../images/background-image.png);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     font-family: 'M PLUS Rounded 1c';
+     background-color: rgb(240, 231, 240);
+ }
+ 
+ #game-container {
+     position: relative;
+     width: 800px;
+     height: 600px;
+     overflow: hidden;
+     margin: 0 auto;
+     background-color: #f3f3f393;
+ }
+
+ .falling-object {
+     position: absolute;
+     will-change: transform;
+     /* アニメーションのパフォーマンス改善 */
+     width: 100px;
+     /* 幅を100pxに設定 */
+     height: auto;
+     /* 高さを100pxに設定 */
+     /* その他のスタイル */
+ }
+
+ /* モーダルの基本スタイリング */
+ .modal {
+     display: none;
+     /* 非表示に設定 */
+     position: fixed;
+     /* 画面に固定 */
+     z-index: 1;
+     /* コンテンツの上に表示 */
+     left: 0;
+     top: 0;
+     width: 100%;
+     /* 幅を全体に */
+     height: 100%;
+     /* 高さを全体に */
+     overflow: auto;
+     /* スクロールバーを有効に */
+     background-color: rgba(0, 0, 0, 0.4);
+     /* 半透明の背景色 */
+ }
+
+ /* モーダル内のコンテンツのスタイリング */
+ .modal-content {
+     background-color: #fefefe;
+     margin: 15% auto;
+     /* 上下にマージンを設定 */
+     padding: 20px;
+     border: 1px solid #888;
+     width: 50%;
+     /* 幅は80%に */
+ }
+
+
+
+ /*トースト*/
+ .toast-message {
+     /* 以下は一例です。実際のスタイルはアプリケーションに合わせて調整してください。 */
+     background-color: rgba(195, 2, 2, 0.556);
+     color: white;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 5px;
+     
+ }
+ #toast-container {
+    color: #fefefeba;
+
+        width: 500px;
+        height: 100px;
+        font-size: 20px;
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     z-index: 10000;
+     margin: 10px 300px 0px 0px;
+     text-align: center;
+     /* 高い値に設定して他の要素の上に来るようにする */
+
+ }
+
+
+ .score_group {
+    color: #fefefeba;
+    background-color: rgba(0, 0, 0, 0.647);
+    width: 300px;
+    height: 100px;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px 0px 300px;
+ }
