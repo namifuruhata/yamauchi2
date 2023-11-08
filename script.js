@@ -223,6 +223,6 @@ function updateScore(isCorrect) {
 
 // ボタンのイベントリスナーを設定
 restartButton.onclick = restartGame;
-toTitleButton.onclick = toTitle;
+//toTitleButton.onclick = toTitle;
 restartButtonClear.onclick = restartGame;
 toTitleButtonClear.onclick = toTitle;
