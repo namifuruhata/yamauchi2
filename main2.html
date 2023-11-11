@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Game</title>
+    <style>
+        /* CSSでゲームのスタイルを設定します */
+        #gameArea {
+            width:  1410px;
+            height: 700px;
+            border: 1px solid #000;
+            position: relative;
+            overflow: hidden;
+            background-image: url(images/back.jpg);
+            background-size: 100%;
+        
+        }
+
+   
+
+        .player {
+         /*   background-color: blue;*/
+             bottom: 200px; /* 単位の追加 */
+      position: absolute;
+            /* 初期位置の追加 */
+        }
+
+        .player img {
+             width: 190px;
+        }
+
+        .enemy {
+          width: 200px; /* これは敵の実際の幅に置き換えてください */
+  height: auto; /* これは敵の実際の高さに置き換えてください */
+  position: absolute;
+
+}
+
+        .projectile {
+            width: 10px;
+            height: 10px;
+            background-color: orange;
+            position: absolute;
+            bottom: 50px;
+
+        }
+.enemyProjectile {
+  width: 10px;
+  height: 10px;
+
+  position: absolute;
+}
+
+.enemyProjectile img {
+    width: 100px;
+}
+
+.item {
+    width: 30px;
+    height: 30px;
+    background-color: gold;
+    position: absolute;
+    top: 0; /* 初期のtop位置 */
+}
+
+
+#hp-bars {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.hp-bar {
+  width: 700px;
+  height: 30px;
+  background-color: #ddd;
+  overflow: hidden;
+}
+
+.hp {
+  height: 100%;
+  background-color: #ffdd00;
+  transition: width 0.5s ease;
+ 
+}
+
+/* モーダルのスタイル */
+#gameOverModal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#gameOverContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.ko img {
+  width: 120px;
+  height: auto;
+  z-index: 2;
+  position: relative;
+  margin-top: -400px;
+  margin-left: 650px;
+}
+
+.body {
+  background-color: #000000;
+}
+
+
+</style>
+</head>
+
+<body>
+    <div class="body">
+    <div id="gameArea">
+        <div id="hp-bars">
+            <div class="hp-bar">
+                <div class="hp" id="player-hp" style="width: 100%;"></div> <!-- プレイヤーのHPバー -->
+            </div>
+            <div class="hp-bar">
+                <div class="hp" id="enemy-hp" style="width: 100%;"></div> <!-- 敵のHPバー -->
+            </div>
+        </div>
+
+
+    <div class="ko">
+        <img src="images/KO.png" alt="KO">
+    </div>
+
+
+        <div id="playerHealth"></div> <!-- HP表示用の要素 -->
+        <div class="player"><img src="images/12.png" alt="プレイヤー"></div>
+        <!-- アイテムの要素はここで追加することもできますが、JavaScriptで動的に生成することを推奨します。 -->
+    </div>
+<!-- ゲームオーバーモーダル -->
+<div id="gameOverModal" style="display:none;">
+    <div id="gameOverContent">
+        <p id="gameOverMessage"></p>
+        <button onclick="restartGame()">リスタート</button>
+    </div>
+</div>
+</div>
+    ​
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
